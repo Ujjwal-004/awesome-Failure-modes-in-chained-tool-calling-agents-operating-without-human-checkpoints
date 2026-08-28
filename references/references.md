@@ -69,8 +69,9 @@ evaluation.
 
 8. **Not what you've signed up for: Compromising Real-World LLM-Integrated
    Applications with Indirect Prompt Injection**
-   - Authors: Kai Greshake et al.
-   - Year: 2023
+   - Authors: Fabio Perez, Ian Ribeiro
+   - Year: 2022
+   - Identifier: arXiv:2211.09527
    - Relevance: Studies indirect prompt injection against applications
      integrating LLMs with external data and tools.
 
@@ -105,13 +106,6 @@ evaluation.
     - Year: 2023
     - Relevance: Explores structured search and evaluation of intermediate
       reasoning states.
-
-14. **Reflexion: Language Agents with Verbal Reinforcement Learning**
-    - Authors: Noah Shinn et al.
-    - Year: 2023
-    - Identifier: arXiv:2303.11366
-    - Relevance: Reflection and memory can affect later actions in
-      multi-step agent execution.
 
 ## 5. Web and Tool-Calling Agents
 
@@ -181,6 +175,9 @@ The papers above are organized around the following failure modes:
 - Multi-step task failure
 - Self-correction and reflection
 
-evidence in the final research paper. DOI, arXiv, publisher, conference,
-author, and year information should be checked against the original scholarly
-record.
+## Verification Note
+
+The references in this file should be verified against their original
+scholarly records before being cited as evidence in the final research paper.
+DOI, arXiv identifier, publisher, conference, author, and year information
+should be checked against the original source.
