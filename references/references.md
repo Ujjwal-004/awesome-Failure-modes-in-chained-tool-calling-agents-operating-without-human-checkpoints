@@ -1,183 +1,135 @@
 # Research References
 
-Research papers related to chained tool-calling agents, agent reliability,
-error propagation, prompt injection, tool use, security, memory, and
-evaluation.
+References used in the research paper on failure modes in chained
+tool-calling agents operating without human checkpoints.
 
-## 1. Tool Use and Agent Foundations
+## References
 
 1. **Toolformer: Language Models Can Teach Themselves to Use Tools**
-   - Authors: Timo Schick et al.
+   - Authors: T. Schick, J. Dwivedi-Yu, R. Dessi, R. Raileanu, M. Lomeli, L. Zettlemoyer, N. Cancedda, T. Scialom
    - Year: 2023
+   - Venue: Advances in Neural Information Processing Systems (NeurIPS)
    - Identifier: arXiv:2302.04761
-   - Relevance: Self-supervised learning of tool use by language models.
+   - DOI: 10.48550/arXiv.2302.04761
 
 2. **ReAct: Synergizing Reasoning and Acting in Language Models**
-   - Authors: Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran,
-     Karthik Narasimhan, Yuan Cao
-   - Year: 2022
+   - Authors: S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, Y. Cao
+   - Year: 2023
+   - Venue: International Conference on Learning Representations (ICLR)
    - Identifier: arXiv:2210.03629
-   - Relevance: Interleaves reasoning and external actions, providing a
-     foundation for chained tool-calling agents.
+   - DOI: 10.48550/arXiv.2210.03629
 
 3. **WebArena: A Realistic Web Environment for Building Autonomous Agents**
-   - Authors: Shuyan Zhou et al.
-   - Year: 2023
+   - Authors: S. Zhou, F. F. Xu, H. Zhu, X. Zhou, R. Lo, A. Sridhar, X. Cheng, T. Ou, Y. Bisk, D. Fried, U. Alon, G. Neubig
+   - Year: 2024
+   - Venue: International Conference on Learning Representations (ICLR)
    - Identifier: arXiv:2307.13854
-   - Relevance: Benchmark for autonomous agents performing multi-step tasks
-     in realistic web environments.
+   - DOI: 10.48550/arXiv.2307.13854
 
-4. **Reflexion: Language Agents with Verbal Reinforcement Learning**
-   - Authors: Noah Shinn, Federico Cassano, Edward Berman, Ashwin Gopinath,
-     Karthik Narasimhan, Shunyu Yao
+4. **AgentBench: Evaluating LLMs as Agents**
+   - Authors: X. Liu et al.
    - Year: 2023
-   - Identifier: arXiv:2303.11366
-   - Relevance: Uses verbal feedback and episodic memory to improve agent
-     performance across repeated trials.
+   - Venue: International Conference on Learning Representations (ICLR)
+   - Identifier: arXiv:2308.03688
+   - DOI: 10.48550/arXiv.2308.03688
 
-## 2. Agent Evaluation and Reliability
-
-5. **AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks
-   and Defenses for LLM Agents**
-   - Authors: Edoardo Debenedetti, Jie Zhang, Mislav Balunovic,
-     Luca Beurer-Kellner, Marc Fischer, Florian Tramèr
+5. **OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments**
+   - Authors: T. Xie et al.
    - Year: 2024
-   - Venue: NeurIPS 2024
+   - Venue: Advances in Neural Information Processing Systems (NeurIPS)
+   - Identifier: arXiv:2404.07972
+
+6. **OSWorld2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks**
+   - Authors: M. Yuan et al.
+   - Year: 2026
+   - Identifier: arXiv:2606.29537
+
+7. **Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection**
+   - Authors: K. Greshake, S. Abdelnabi, S. Mishra, C. Endres, T. Holz, M. Fritz
+   - Year: 2023
+   - Venue: Proceedings of the 2023 ACM Workshop on Artificial Intelligence and Security (AISec)
+   - Pages: 79–90
+   - DOI: 10.1145/3605764.3623985
+   - Identifier: arXiv:2302.12173
+
+8. **InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents**
+   - Authors: Q. Zhan, Z. Liang, Z. Ying, D. Kang
+   - Year: 2024
+   - Venue: Findings of the Association for Computational Linguistics: ACL 2024
+   - Pages: 10471–10506
+   - DOI: 10.18653/v1/2024.findings-acl.624
+   - Identifier: arXiv:2403.02691
+
+9. **AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents**
+   - Authors: E. Debenedetti, J. Zhang, M. Balunovic, L. Beurer-Kellner, M. Fischer, F. Tramèr
+   - Year: 2024
+   - Venue: Advances in Neural Information Processing Systems (NeurIPS 37)
+   - Pages: 82895–82920
    - DOI: 10.52202/079017-2636
-   - Relevance: Evaluates agents executing tools over untrusted data and
-     demonstrates failures caused by prompt injection and task complexity.
 
-6. **Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and
-   Defenses in LLM-based Agents**
-   - Authors: Hanrong Zhang, Jingyuan Huang, Kai Mei, Yifei Yao,
-     Zhenting Wang, Chenlu Zhan, Hongwei Wang, Yongfeng Zhang
-   - Year: 2024
-   - Identifier: arXiv:2410.02644
-   - Relevance: Comprehensive benchmark covering attacks, defenses, tools,
-     memory, and multiple agent scenarios.
-
-7. **The Task Shield: Enforcing Task Alignment to Defend Against Indirect
-   Prompt Injection in LLM Agents**
-   - Authors: Feiran Jia, Tong Wu, Xin Qin, Anna Squicciarini
-   - Year: 2025
-   - Venue: ACL 2025
-   - DOI: 10.18653/v1/2025.acl-long.1435
-   - Relevance: Defense mechanism that verifies whether agent instructions
-     and tool calls remain aligned with the user's task.
-
-## 3. Security and Prompt Injection
-
-8. **Not what you've signed up for: Compromising Real-World LLM-Integrated
-   Applications with Indirect Prompt Injection**
-   - Authors: Fabio Perez, Ian Ribeiro
-   - Year: 2022
-   - Identifier: arXiv:2211.09527
-   - Relevance: Studies indirect prompt injection against applications
-     integrating LLMs with external data and tools.
-
-9. **Ignore Previous Prompt: Attack Techniques For Language Models**
-   - Authors: Various researchers
-   - Year: 2023
-   - Relevance: Provides background on prompt injection and instruction
-     hierarchy failures relevant to tool-using agents.
-
-10. **Jailbroken: How Does LLM Safety Training Fail?**
-    - Authors: Andy Wei et al.
+10. **API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs**
+    - Authors: M. Li, Y. Zhao, B. Yu, F. Song, H. Li, H. Yu, Z. Li, F. Huang, Y. Li
     - Year: 2023
-    - Relevance: Examines weaknesses in safety alignment that can contribute
-      to unsafe agent behavior.
+    - Identifier: arXiv:2304.08244
+    - DOI: 10.48550/arXiv.2304.08244
 
-## 4. Autonomous Agents and Multi-Step Reasoning
-
-11. **AutoGPT: An Autonomous GPT-4 Experiment**
+11. **Reflexion: Language Agents with Verbal Reinforcement Learning**
+    - Authors: N. Shinn, F. Cassano, E. Berman, A. Gopinath, K. Narasimhan, S. Yao
     - Year: 2023
-    - Relevance: Early autonomous-agent architecture illustrating recursive
-      planning, tool use, and multi-step execution.
+    - Venue: Advances in Neural Information Processing Systems (NeurIPS)
+    - Identifier: arXiv:2303.11366
+    - DOI: 10.48550/arXiv.2303.11366
 
-12. **Generative Agents: Interactive Simulacra of Human Behavior**
-    - Authors: Joon Sung Park et al.
-    - Year: 2023
-    - Venue: UIST 2023
-    - Relevance: Demonstrates memory, planning, reflection, and autonomous
-      behavior in language-model-based agents.
-
-13. **Tree of Thoughts: Deliberate Problem Solving with Large Language Models**
-    - Authors: Shunyu Yao et al.
-    - Year: 2023
-    - Relevance: Explores structured search and evaluation of intermediate
-      reasoning states.
-
-## 5. Web and Tool-Calling Agents
-
-15. **WebShop: Towards Scalable Real-World Web Interaction with Grounded
-    Language Agents**
-    - Authors: Shunyu Yao et al.
-    - Year: 2022
-    - Relevance: Evaluates language agents interacting with realistic web
-      shopping environments.
-
-16. **Mind2Web: Towards a Generalist Agent for the Web**
-    - Authors: Xueguang Ma et al.
-    - Year: 2023
-    - Relevance: Studies general-purpose web agents and multi-step web
-      interaction.
-
-17. **BrowserGym: a Gym Environment for Web Task Automation**
-    - Authors: Arthur Lefranc et al.
+12. **SWE-bench: Can Language Models Resolve Real-World GitHub Issues?**
+    - Authors: C. E. Jimenez, J. Yang, A. Wettig, S. Yao, K. Pei, O. Press, K. Narasimhan
     - Year: 2024
-    - Relevance: Provides an environment for evaluating web agents on
-      realistic browser tasks.
+    - Venue: International Conference on Learning Representations (ICLR)
+    - Identifier: arXiv:2310.06770
+    - DOI: 10.48550/arXiv.2310.06770
 
-## 6. Agent Planning, Memory and Error Propagation
-
-18. **Chain-of-Thought Prompting Elicits Reasoning in Large Language Models**
-    - Authors: Jason Wei et al.
-    - Year: 2022
-    - Relevance: Foundational work on multi-step reasoning and intermediate
-      reasoning chains.
-
-19. **Self-Refine: Iterative Refinement with Self-Feedback**
-    - Authors: Aman Madaan et al.
-    - Year: 2023
-    - Relevance: Shows how iterative feedback can improve generated outputs
-      and reduce errors.
-
-20. **CRITIC: Large Language Models Can Self-Correct with Tool-Interactive
-    Critiquing**
-    - Authors: Zhibin Gou et al.
+13. **Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents**
+    - Authors: H. Zhang et al.
     - Year: 2024
-    - Relevance: Uses external tools for critique and self-correction,
-      directly relevant to verification in tool-using agents.
+    - Venue: International Conference on Learning Representations (ICLR)
+    - Identifier: arXiv:2410.02644
+    - DOI: 10.48550/arXiv.2410.02644
 
-21. **AgentBench: Evaluating LLMs as Agents**
-    - Authors: Xiao Liu et al.
-    - Year: 2023
-    - Relevance: Benchmark for evaluating LLM agents across multiple
-      environments and task types.
+14. **The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions**
+    - Authors: E. Wallace, K. Xiao, R. Leike, L. Weng, J. Heidecke, A. Beutel
+    - Year: 2024
+    - Identifier: arXiv:2404.13208
+    - DOI: 10.48550/arXiv.2404.13208
 
-## 7. Key Research Themes
+15. **Towards Verifiably Safe Tool Use for LLM Agents**
+    - Authors: A. Doshi, Y. Hong, C. Xu, E. Kang, A. Kapravelos, C. Kästner
+    - Year: 2026
+    - Venue: Proceedings of the IEEE/ACM International Conference on Software Engineering (ICSE)
+    - Identifier: arXiv:2601.08012
+    - DOI: 10.1145/3786582.3786839
 
-The papers above are organized around the following failure modes:
+16. **The Task Shield: Enforcing Task Alignment to Defend Against Indirect Prompt Injection in LLM Agents**
+    - Authors: F. Jia, T. Wu, X. Qin, A. Squicciarini
+    - Year: 2025
+    - Venue: Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL)
+    - Pages: 29680–29697
+    - DOI: 10.18653/v1/2025.acl-long.1435
+    - Identifier: arXiv:2412.16682
 
-- Tool misuse
-- Incorrect tool selection
-- Error propagation across chained steps
-- Hallucinated intermediate results
-- Prompt injection
-- Indirect prompt injection
-- Memory poisoning
-- Planning failures
-- State-tracking failures
-- Lack of verification
-- Unsafe autonomous actions
-- Lack of human checkpoints
-- Agent security and robustness
-- Multi-step task failure
-- Self-correction and reflection
+17. **Runtime Policy Enforcement for MCP-Based LLM Agents**
+    - Year: 2026
+    - Venue: Electronics, vol. 15
+    - Article: 2829
+    - DOI: 10.3390/electronics15132829
 
-## Verification Note
+18. **AttriGuard: Defeating Indirect Prompt Injection in LLM Agents via Causal Attribution of Tool Invocation**
+ ## Verification Note
 
-The references in this file should be verified against their original
-scholarly records before being cited as evidence in the final research paper.
-DOI, arXiv identifier, publisher, conference, author, and year information
-should be checked against the original source.
+The references above correspond to the references listed in the research
+paper PDF. Bibliographic information should be checked against the original
+scholarly records before the references are used as evidence in a final
+publication. DOI, arXiv identifier, publisher, conference, author, year,
+volume, article, and page information should be verified against the
+corresponding original source.
+    - Authors: Y. He, Z. Zhu, Y. Li, S. Shao, H. Yao, Z. Liu, Z. Qin
+    - Year: 2026
+    - Venue: 35th USENIX Security Symposium (USENIX Security '26)
