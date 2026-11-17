@@ -1,0 +1,41 @@
+{
+  "python": "3.13.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "config": {
+    "study": "Synthetic fault-injection comparison of checkpoint policies in chained tool calls",
+    "scenario_lengths": [
+      6,
+      12,
+      24
+    ],
+    "seeds": [
+      11,
+      29,
+      47,
+      83,
+      101
+    ],
+    "trials_per_seed_length": 400,
+    "low_risk_fault_probability": 0.035,
+    "high_risk_fault_probability": 0.17,
+    "high_risk_action_probability": 0.3,
+    "checkpoint_detection_probability": 0.92,
+    "fixed_checkpoint_interval": 4,
+    "checkpoint_policy_definitions": {
+      "none": "No verification",
+      "fixed": "Check at step 4, 8, 12, etc. AFTER the action",
+      "adaptive": "Check immediately BEFORE each high-risk action"
+    },
+    "primary_metric": "task_success: clean final state AND zero unsafe high-risk tool actions",
+    "secondary_metrics": [
+      "any_unsafe",
+      "reviews",
+      "recoveries",
+      "end_state_clean"
+    ],
+    "important_limitation": "The fixed policy checks after actions; adaptive checks before high-risk actions; neither can undo already-unsafe actions; no LLM is evaluated"
+  },
+  "total_primary_runs": 18000,
+  "sensitivity_runs": 18000,
+  "execution": "completed; all results produced by scripts/run_experiments.py"
+}
